@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class KillTrigger : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public PlayerController.HealthObject.HealthState setHealthState = PlayerController.HealthObject.HealthState.GenericDead;
+    public AudioSource[] soundEffects;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D c)
     {
-        //collision.
+        PlayerController playerController = c.GetComponentInParent<PlayerController>();
+        if (playerController != null)
+        {
+            playerController.Kill(this.setHealthState);
+            foreach (AudioSource soundEffect in this.soundEffects)
+                soundEffect.Play();
+        }
     }
 }

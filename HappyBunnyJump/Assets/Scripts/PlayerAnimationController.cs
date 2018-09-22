@@ -15,15 +15,11 @@ public class PlayerAnimationController : MonoBehaviour
     string _currentDirection = "left";
 
     private Animator animator;
+    [HideInInspector]
+    public PlayerController playerController;
+    [HideInInspector]
     public PlayerMovement playerMovement;
-
-    // Use this for initialization
-    void Start()
-    {
-        animator = this.GetComponentInChildren<Animator>();
-        //physicsController = this.GetComponent<NinjaController>();
-    }
-
+    
     // Update is called once per frame
     void Update()
     {

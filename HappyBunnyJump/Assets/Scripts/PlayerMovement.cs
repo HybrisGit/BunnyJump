@@ -11,6 +11,10 @@ public class PlayerMovement : MonoBehaviour
         Right
     }
 
+    [HideInInspector]
+    public PlayerController playerController;
+
+    public Transform startPosition;
     public Rigidbody2D rBody;
     public TriggerHandler groundTrigger;
     public float acceleration;
@@ -23,8 +27,17 @@ public class PlayerMovement : MonoBehaviour
     public bool IsGrounded { get; private set; }
     public MovementDirection Direction { get; private set; }
 
+    public void Respawn()
+    {
+        this.transform.position = this.startPosition.position;
+    }
+
     void FixedUpdate()
     {
+        if (this.playerController.Health.healthState != PlayerController.HealthObject.HealthState.Well)
+        {
+            return;
+        }
         float movement = Input.GetAxis("Horizontal");
         bool jumping = Input.GetButtonDown("Jump");
         this.IsGrounded = this.groundTrigger.IsTriggered();
