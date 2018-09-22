@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4743635887284644}
   - component: {fileID: 212969822962614824}
+  - component: {fileID: 114732019284806240}
   m_Layer: 0
   m_Name: CarrotsForDays
   m_TagString: Untagged
@@ -37,7 +38,7 @@ GameObject:
   - component: {fileID: 4681332590406926}
   - component: {fileID: 212183720908892292}
   - component: {fileID: 60635719800185948}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Branch_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,6 +375,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 150, y: 1.1587715}
   m_EdgeRadius: 0
+--- !u!114 &114732019284806240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1029491870395548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62996e72d91aea04f89020aa8a4db624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212183720908892292
 SpriteRenderer:
   m_ObjectHideFlags: 1
