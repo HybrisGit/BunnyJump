@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class TriggerHandler : MonoBehaviour
 {
-    private bool triggered = false;
+    private int triggers = 0;
 
     public bool IsTriggered()
     {
-        return this.triggered;
+        return this.triggers > 0;
     }
 
     public void OnTriggerEnter2D(Collider2D c)
     {
-        this.triggered = true;
+        this.triggers++;
         Debug.Log("Trigger enter : ");
     }
 
     public void OnTriggerExit2D(Collider2D c)
     {
-        this.triggered = false;
+        this.triggers--;
         Debug.Log("Trigger exit : ");
     }
 }
