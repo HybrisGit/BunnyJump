@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     public float acceleration;
     public float jumpVelocity;
     public float jumpCooldownSeconds;
-    public float drag;
     public float maxMovementSpeed;
 
     private float lastJump = 0f;
@@ -65,8 +64,9 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         // jump
-        if (this.IsGrounded && jumping && Time.time - lastJump > this.jumpCooldownSeconds)
+        if (this.IsGrounded && jumping && Time.time - this.lastJump > this.jumpCooldownSeconds)
         {
+            this.lastJump = Time.time;
             this.rBody.velocity += new Vector2(0f, this.jumpVelocity);
         }
     }
