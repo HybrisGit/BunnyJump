@@ -396,19 +396,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 114990002293503928}
   animationController: {fileID: 114538860525752108}
-  defaultModel: {fileID: 1226964539022650}
   audioSource: {fileID: 82479625193334818}
   healthObjects:
+  - healthState: 0
+    model: {fileID: 1226964539022650}
+    activationSFX: {fileID: 8300000, guid: 986ec910d2656ef4c9b78e048706d0bc, type: 3}
   - healthState: 1
     model: {fileID: 1930247890603094}
-    activationSFX: {fileID: 8300000, guid: 52517ab06424c8440b1c116098a00799, type: 3}
+    activationSFX: {fileID: 8300000, guid: 0dcaeb399e515eb43b34507ed73d8471, type: 3}
   - healthState: 2
     model: {fileID: 1375089210546630}
     activationSFX: {fileID: 8300000, guid: 5b6ebee8d6886b14d93a1dba0d32f1c9, type: 3}
-  defaultHealthObject:
-    healthState: 0
-    model: {fileID: 1226964539022650}
-    activationSFX: {fileID: 8300000, guid: 986ec910d2656ef4c9b78e048706d0bc, type: 3}
   respawnTimeSeconds: 4
 --- !u!114 &114990002293503928
 MonoBehaviour:

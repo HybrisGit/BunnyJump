@@ -19,23 +19,25 @@ public class PlayerController : MonoBehaviour {
 
         public void Setup()
         {
-            this.model.SetActive(false);
+            this.Deactivate();
         }
 
         public void Activate(PlayerController controller)
         {
-            controller.defaultModel.SetActive(false);
             this.model.SetActive(true);
             controller.audioSource.PlayOneShot(this.activationSFX);
+        }
+
+        public void Deactivate()
+        {
+            this.model.SetActive(false);
         }
     }
 
     public PlayerMovement movement;
     public PlayerAnimationController animationController;
-    public GameObject defaultModel;
     public AudioSource audioSource;
     public HealthObject[] healthObjects;
-    public HealthObject defaultHealthObject;
     public float respawnTimeSeconds;
 
     private float lastDead = 0f;
@@ -51,6 +53,10 @@ public class PlayerController : MonoBehaviour {
         {
             if (this._health == null || this._health.healthState != value.healthState)
             {
+                if (this._health != null)
+                {
+                    this._health.Deactivate();
+                }
                 this._health = value;
                 this._health.Activate(this);
             }
@@ -86,7 +92,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    public void Kill(HealthObject.HealthState health)
+    public void SetHealthState(HealthObject.HealthState health)
     {
         foreach (HealthObject o in this.healthObjects)
         {
@@ -101,7 +107,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Respawn()
     {
-        this.Health = this.defaultHealthObject;
+        this.SetHealthState(HealthObject.HealthState.Well);
 
         this.movement.Respawn();
     }

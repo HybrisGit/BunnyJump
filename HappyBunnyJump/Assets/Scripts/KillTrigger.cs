@@ -12,7 +12,7 @@ public class KillTrigger : MonoBehaviour {
         PlayerController playerController = c.GetComponentInParent<PlayerController>();
         if (playerController != null)
         {
-            playerController.Kill(this.setHealthState);
+            playerController.SetHealthState(this.setHealthState);
             foreach (AudioSource soundEffect in this.soundEffects)
                 soundEffect.Play();
         }
