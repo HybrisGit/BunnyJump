@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour {
             GenericNotDead,
             Gore,
             Horror,
+            HappyEatingCake,
+            SitInBirdNest,
+            Posinoed,
         }
 
         public HealthState healthState;
@@ -41,6 +44,7 @@ public class PlayerController : MonoBehaviour {
     public AudioSource audioSource;
     public HealthObject[] healthObjects;
     public float respawnTimeSeconds;
+    public float knockedTimeSeconds;
 
     private float lastDead = 0f;
 
