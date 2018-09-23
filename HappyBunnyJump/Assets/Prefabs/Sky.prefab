@@ -52,9 +52,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd3d07796c43e72459e666f5898aa49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.1
-  xAxis: 0
-  yAxis: 0
+  scrollSpeed: 0.9
+  xAxis: 1
+  yAxis: 1
 --- !u!212 &212313015348385586
 SpriteRenderer:
   m_ObjectHideFlags: 1
