@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     public void Respawn()
     {
         this.transform.position = this.startPosition.position;
+        this.rBody.velocity = Vector2.zero;
     }
 
     void FixedUpdate()
