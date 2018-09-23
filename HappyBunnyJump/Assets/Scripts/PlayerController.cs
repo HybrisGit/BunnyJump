@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour {
             Well,
             GenericDead,
             GenericNotDead,
+            Gore,
+            Horror,
         }
 
         public HealthState healthState;
