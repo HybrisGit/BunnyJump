@@ -6,6 +6,7 @@ public class CameraFollower : MonoBehaviour
 
     public GameObject player;       //Public variable to store a reference to the player game object
 
+    public float clampedYPosition;
 
     private Vector3 offset;         //Private variable to store the offset distance between the player and camera
 
@@ -20,6 +21,9 @@ public class CameraFollower : MonoBehaviour
     void LateUpdate()
     {
         // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
-        transform.position = player.transform.position + offset;
+        Vector3 position = player.transform.position + offset;
+        position.y = Mathf.Max(position.y, clampedYPosition);
+
+        transform.position = position;
     }
 }

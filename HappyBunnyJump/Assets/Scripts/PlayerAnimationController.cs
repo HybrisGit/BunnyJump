@@ -19,7 +19,12 @@ public class PlayerAnimationController : MonoBehaviour
     public PlayerController playerController;
     [HideInInspector]
     public PlayerMovement playerMovement;
-    
+
+    private void Awake()
+    {
+        this.animator = this.GetComponent<Animator>();
+    }
+
     // Update is called once per frame
     void Update()
     {

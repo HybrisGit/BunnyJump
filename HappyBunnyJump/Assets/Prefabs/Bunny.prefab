@@ -211,7 +211,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 245cc692205fe3e46ae57ac2a5739401, type: 2}
+  m_Material: {fileID: 6200000, guid: 24ac79603fb61400588e37d9f6fe952a, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -224,7 +224,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1277050169985398}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 245cc692205fe3e46ae57ac2a5739401, type: 2}
+  m_Material: {fileID: 6200000, guid: 24ac79603fb61400588e37d9f6fe952a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -350,7 +350,7 @@ Animator:
   m_GameObject: {fileID: 1226964539022650}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f10876f352911f4f9eb65a58184a2bc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -367,7 +367,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1855089647362966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc7e3cad9a9feda41be3dba083897522, type: 3}
+  m_Script: {fileID: 11500000, guid: 4825b48fd9d5a6f41933a33a43dd52a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114538860525752108
@@ -378,11 +378,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1226964539022650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c7641e317f8da645b0edbb17ceda8f7, type: 3}
+  m_Script: {fileID: 11500000, guid: a5fd61edab284344da8eb7938b552acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 0}
-  playerMovement: {fileID: 0}
+  playerMovement: {fileID: 114990002293503928}
 --- !u!114 &114629585415178944
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -391,7 +391,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1277050169985398}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c92be4779d42fc4ca286a37e7d17660, type: 3}
+  m_Script: {fileID: 11500000, guid: 9604328ad9ce5784f9b269568bf39e26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 114990002293503928}
@@ -403,10 +403,14 @@ MonoBehaviour:
     activationSFX: {fileID: 8300000, guid: 986ec910d2656ef4c9b78e048706d0bc, type: 3}
   - healthState: 1
     model: {fileID: 1930247890603094}
-    activationSFX: {fileID: 8300000, guid: 0dcaeb399e515eb43b34507ed73d8471, type: 3}
+    activationSFX: {fileID: 8300000, guid: 59f9673b63ff7e643b66b97c706c2f25, type: 3}
   - healthState: 2
     model: {fileID: 1375089210546630}
-    activationSFX: {fileID: 8300000, guid: 5b6ebee8d6886b14d93a1dba0d32f1c9, type: 3}
+    activationSFX: {fileID: 8300000, guid: 84a9cc65512fac74b83a8bb3abb97c46, type: 3}
+  defaultHealthObject:
+    healthState: 0
+    model: {fileID: 1226964539022650}
+    activationSFX: {fileID: 8300000, guid: 50efd8d07ccf6034ea586e0ee6bd1023, type: 3}
   respawnTimeSeconds: 4
 --- !u!114 &114990002293503928
 MonoBehaviour:
@@ -416,7 +420,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1277050169985398}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fac45535c6764794a95b9b21a2d7662e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b5e5f1414d3c74418b328fee51b6515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 0}
@@ -462,7 +466,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 37fd757763ee6f94096b78723e11609f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1dc8356c5ea016b4fbf9c0ae2e6542f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -554,7 +558,7 @@ SpriteRenderer:
   m_SortingLayerID: -1783731295
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7dbd84ff535d1eb4ea435477dd4ee8bf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 43a8a8cb4cdb3484b98428be6835edf4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
